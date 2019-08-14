@@ -1,0 +1,15 @@
+<?php
+$modulename = Mage::app()->getRequest()->getModuleName();
+
+switch($modulename){
+	case 'catalog':
+		$productId  = (int) $this->getRequest()->getParam('id');
+		$product = Mage::getModel('catalog/product')->load($productId);
+		$value=$product->getSku();break;
+	case 'checkout':$value = $this->helper('checkout/cart')->getQuote()->getGrandTotal();
+
+}
+?>
+<script>
+var value = '<?php echo $value; ?>';
+</script>

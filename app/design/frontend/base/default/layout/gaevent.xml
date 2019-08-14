@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+	<default>
+		<!-- add the local stylesheet -->
+		<reference name="head">
+		<action method="addJs"><script>gaevent/jquery1.6.2.min.js</script></action>
+		<action method="addItem">
+		    <type>js</type>
+		    <name>../media/gaevent/gaevent.js</name>
+		</action>
+		<action method="addJs"><script>gaevent/ga.event.processing.js</script></action>
+		</reference>	
+		<reference name="content">
+			<block type="gaevent/common" name="gacommon" after="footer_links" output="toHtml" template="gaevent/gacommon.phtml"/>
+		</reference>		   	
+	</default>
+	<checkout_onepage_review>
+	     <reference name="checkout.onepage.review.info.items.after">
+			<block type="core/template" name="gareview" output="toHtml" template="gaevent/gareview.phtml"/>
+	    </reference>
+	</checkout_onepage_review>
+	
+</layout>

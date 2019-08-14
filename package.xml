@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<package>
+    <name>neevGaEventTracker</name>
+    <version>1.0.0.4</version>
+    <stability>stable</stability>
+    <license>OSL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Magento Google Analytics extension allows tracking user events and actions also provides additional facility to track user events and actions with configuration of element Id or url or Classname for the tracking event and actions. </summary>
+    <description>Magento Google Analytics extension allows tracking user events and actions also provides additional facility to track user events and actions with configuration of element Id or url or Classname for the tracking event and actions. </description>
+    <notes>&lt;p&gt;Magento Google Analytics extension allows tracking user events and actions also provides additional facility to track user events and actions with configuration of element Id or url or Classname for the tracking event and actions. &lt;/p&gt;&lt;p&gt;Provides easy system configuration flexibility which provides analytical view for configured user events and actions on web store.&lt;/p&gt;&#xD;
+Following are the steps to enable the extension :&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&#xD;
+Step 1 : Install Magento Google Analytics Extension&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+Step 2 :Navigate to System &#x2192; Configuration&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+Step 3 :Click on &#x201C; Google Analytics Event Tracking &#x201C;&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+Step 4 :Enable option &#x201C;Yes&#x201D; for Google Analytical Events Tracking setting.&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+Step 5 :Add Tracking Event Element and action.&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+Step 6 :Check the box &#x201C;Enable Ecommerce Event Tracking&#x201D; to save order details.&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+Step 7 :Save Config&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+Step 8 : Clear magento cache.&#xD;
+&lt;/li&gt;&#xD;
+&lt;/ul&gt;</notes>
+    <authors><author><name>Saurabh</name><user>Neev</user><email>magentoaccount@neevtech.com</email></author></authors>
+    <date>2014-04-03</date>
+    <time>06:06:15</time>
+    <contents><target name="mage"><dir><dir name="app"><dir name="code"><dir name="local"><dir name="Neev"><dir name="Gaevent"><dir name="Block"><dir name="Adminhtml"><dir name="Gaevent"><dir name="Edit"><file name="Form.php" hash="8b152b4c71adfee7b133e9ed16eda3e6"/><dir name="Tab"><file name="Form.php" hash="f9ed5ae93593cf1177ceb428b158d237"/></dir><file name="Tabs.php" hash="0cf62fdc13af6d43a6794f84bc0252fa"/></dir><file name="Edit.php" hash="b1c5d3dce0d7d0ca169a69208e83185d"/><file name="Grid.php" hash="39e0b78a172b041d14ad5370c21d3372"/></dir><file name="Gaevent.php" hash="3bcc8431c519ac46b563ad8840ff5344"/></dir><file name="Button.php" hash="06383fc354f55940916dea201df911ff"/><file name="Common.php" hash="24d14e5e38b14f37710ca10fdf656db8"/><file name="EcommerceCheck.php" hash="c7a76447816913fedd143d3d450cb762"/><file name="Field.php" hash="e087ce9be0d4e097e1930ff9929d06ca"/><file name="Gaevent.php" hash="0a6cf366181934e5740714c33fac6ef4"/><file name="Groups.php" hash="ecc911392794fccae1b9c49bf386f1d4"/><file name="Text.php" hash="c292049ae79af4d107d3f7e304528f2c"/></dir><dir name="Helper"><file name="Data.php" hash="824c7a988b017dbef0ade6c9fe5436b5"/></dir><dir name="Model"><file name="EcommerceCheck.php" hash="be8ae0e63122e3773c56d5754c8da0c5"/><file name="Gaevent.php" hash="fda3807d3794ebf0c07f2d16b4565080"/><file name="Message.php" hash="2786ef06852ec2cd6135e775ab7cb137"/><dir name="Mysql4"><dir name="Gaevent"><file name="Collection.php" hash="132386283dd9fdcae3e69b22e41f7339"/></dir><file name="Gaevent.php" hash="593a00ac4a177e9b07bc88dc66b051b4"/></dir><file name="Observer.php" hash="c5c325096f85686873601d403c3e8284"/><file name="Status.php" hash="074a47b83e1d8ad47d430a3de5208194"/><file name="Words.php" hash="f52a66e8a8d0d84a07853d54d55ad292"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="GaeventController.php" hash="54376a4057b47f979bc368c40d9087b5"/></dir><file name="IndexController.php" hash="b35c0804e9aecf8a841c8c549ae6f0c7"/></dir><dir name="etc"><file name="config.xml" hash="31646eba961c384a8670a5045cde201f"/><file name="system.xml" hash="2934f00ea2e46ee48e635a665e3ca7f6"/></dir><dir name="sql"><dir name="gaevent_setup"><file name="mysql4-install-0.1.0.php" hash="7712ab1132a3f48addcc3861173f9a1f"/></dir></dir></dir></dir></dir></dir><dir name="design"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="template"><dir name="gaevent"><file name="ecommerceCheck.phtml" hash="cfb31ee55ea76b1fe665c8fdd10b83d1"/></dir></dir></dir></dir></dir><dir name="frontend"><dir name="base"><dir name="default"><dir name="template"><dir name="gaevent"><file name="gacommon.phtml" hash="f662f389b0df87e4245ab8965575217d"/><file name="gacommon.phtml~" hash="805871f655044be2ac31f5fa35d45563"/><file name="gareview.phtml" hash="90206b91d026a337e94abea470486cae"/><file name="gareview.phtml~" hash="7a57edb4d2fa43163dde1a0b771f7a29"/><file name="reviews1.phtml~" hash="adf2b539566675af2e911d85fafbcee7"/></dir></dir></dir></dir></dir></dir></dir><dir name="js"><dir name="gaevent"><file name="ga.event.processing.js" hash="e9a5d20a9ab8a985fbcde9e55a8fa01f"/><file name="ga.event.processing.js~" hash="c03e060a0eddc67cf24475182b1d0603"/><file name="jquery1.6.2.min.js" hash="e994123ad0417723d69e9511fa889874"/></dir></dir></dir></target><target name="mageweb"><dir><dir name="app"><dir name="etc"><dir name="modules"><file name="Neev_Gaevent.xml" hash="3d7b329f01d1b7f9bfa891d8537d7b91"/></dir></dir><dir name="design"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="gaevent.xml" hash="3caede8406b84eb3264c2fb996d86b6e"/></dir></dir></dir></dir><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="gaevent.xml" hash="46954da1d49432713fd51a3c27ea9796"/></dir></dir></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

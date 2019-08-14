@@ -1,0 +1,22 @@
+<?php
+$modulename = Mage::app()->getRequest()->getModuleName();
+$gaModuleEnable = 0;
+if(Mage::getStoreConfig('gaevent_options/messages/enable') == 1){
+	$gaModuleEnable = 1;
+}
+
+switch($modulename){
+	case 'catalog':
+		$productId  = (int) $this->getRequest()->getParam('id');
+		$product = Mage::getModel('catalog/product')->load($productId);
+		$value=$product->getName();
+		break;
+	case 'checkout':$value = $this->helper('checkout/cart')->getQuote()->getGrandTotal();
+		break;
+}
+?>
+<script>
+var value = '<?php echo $value; ?>';
+var moduleName = '<?php echo $modulename; ?>';
+var gaModuleEnable = '<?php echo $gaModuleEnable; ?>';
+</script>

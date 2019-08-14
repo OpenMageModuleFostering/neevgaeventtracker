@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <gaevent_adminhtml_gaevent_index>
+        <reference name="content">
+            <block type="gaevent/adminhtml_gaevent" name="gaevent" />
+        </reference>
+    </gaevent_adminhtml_gaevent_index>
+</layout>

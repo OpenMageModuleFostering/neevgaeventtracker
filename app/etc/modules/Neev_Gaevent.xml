@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Neev_Gaevent>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_GoogleAnalytics />
+            </depends>
+        </Neev_Gaevent>
+    </modules>
+</config> 

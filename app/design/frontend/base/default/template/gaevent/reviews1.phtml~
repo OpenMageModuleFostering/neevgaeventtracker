@@ -1,0 +1,22 @@
+sasa<?php
+Mage::app()->getRequest()->getControllerName();
+
+Mage::app()->getRequest()->getActionName();
+
+Mage::app()->getRequest()->getRouteName();
+
+echo $modulename = Mage::app()->getRequest()->getModuleName();
+
+switch($modulename){
+	case 'catalog':
+		$productId  = (int) $this->getRequest()->getParam('id');
+		$product = Mage::getModel('catalog/product')->load($productId);
+		$value=$product->getSku();
+	case 'checkout':$value = $this->helper('checkout/cart')->getQuote()->getGrandTotal();
+
+}
+?>
+<script>
+//var modulename = '<?php echo $modulename; ?>';
+var value = '<?php echo $value; ?>';
+</script>

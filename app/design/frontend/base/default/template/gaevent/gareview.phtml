@@ -1,0 +1,58 @@
+<?php
+if(Mage::getStoreConfig('gaevent_options/messages/ecommerce_event')==1){
+$cart = Mage::getModel('checkout/cart')->getQuote();
+$totals = $cart->getTotals(); //Total object
+$subtotal = round($totals["subtotal"]->getValue()); //Subtotal value
+if(isset($totals['tax']) && $totals['tax']->getValue()) {
+	$tax = round($totals['tax']->getValue()); //Tax value if present
+} else {
+	$tax = 0;
+}
+$shippingAddress = $cart->getShippingAddress();
+$shippingAmount=$shippingAddress['shipping_amount'];
+$store = Mage::app()->getStore();
+$name = $store->getName();
+$lastIncrementId = Mage::getSingleton('eav/config')->getEntityType('order')->fetchNewIncrementId(Mage::getModel('checkout/cart')->getQuote()->getStoreId());
+?>
+<script>
+_gaq.push(['_trackPageview']);
+_gaq.push(['_addTrans',
+   "<?php echo $lastIncrementId;  ?>",           // transaction ID - required
+   '<?php echo $name; ?>', // affiliation or store name
+   '<?php $cart->getGrandTotal() ?>',          // total - required
+   '<?php echo $tax; ?>',           // tax
+   '<?php echo $shippingAmount; ?>',          // shipping
+   '<?php echo $shippingAddress->getData("city"); ?>',       // city
+   '<?php echo $shippingAddress->getRegion(); ?>',     // state or province
+   '<?php echo $shippingAddress->getCountry(); ?>'             // country
+]);
+
+</script>
+<?php
+$cart = Mage::getModel('checkout/cart')->getQuote();
+foreach ($cart->getAllItems() as $item) {
+	$cats = $item->getProduct()->getCategoryIds();
+	foreach ($cats as $categoryId) {
+		$cat = Mage::getModel('catalog/category')->load($categoryId) ;
+		$catName =$cat->getName();
+	}
+?>
+<script>
+	_gaq.push(['_addItem',
+	   '<?php echo $lastIncrementId; ?>',           // transaction ID - necessary to associate item with transaction
+	   '<?php echo $item->getProduct()->getSku(); ?>',           // SKU/code - required
+	   '<?php echo $item->getProduct()->getName(); ?>',        // product name
+	   '<?php echo $catName; ?>',   // category or variation
+	   '<?php echo $item->getProduct()->getPrice();?>',          // unit price - required
+	   '<?php echo $item->getProduct()->getQtyOrdered();?>'               // quantity - required
+	]);
+</script>
+<?php
+}
+?>
+<script>
+	_gaq.push(['_trackTrans']);
+</script>
+<?php
+}
+?>
