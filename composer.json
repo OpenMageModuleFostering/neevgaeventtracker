@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/neevGaEventTracker",
+    "name": "openmage-module-fostering\/neevgaeventtracker",
     "type": "magento-module",
-    "license": "OSL",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "Magento Google Analytics extension allows tracking user events and actions also provides additional facility to track user events and actions with configuration of element Id or url or Classname for the tracking event and actions. ",
     "authors": [
